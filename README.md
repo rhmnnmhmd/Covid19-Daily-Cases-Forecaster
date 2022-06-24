@@ -6,31 +6,32 @@
 ![Keras](https://img.shields.io/badge/Keras-%23D00000.svg?style=for-the-badge&logo=Keras&logoColor=white)
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=for-the-badge&logo=TensorFlow&logoColor=white)
 
-# Project: Article/Texts Categorization
+# Project: COVID19 Daily Cases Forecaster
 
 # Description
-The project is about developing a deep learning model to categorize newly received articles into either one of the five categories (sport, technology, business, entertainment, politics). This is done by training a NLP deep learning model on one of [BBC text data](https://raw.githubusercontent.com/susanli2016/PyCon-Canada-2019-NLP-Tutorial/master/bbc-text.csv). The main layer of the NLP deep learning model is the bi-directional LSTM layer that is inputted with the forementioned text data, containing 2000+ articles that is labelled according to the five categories mentioned earlier.
+The project is about developing a deep learning model using LSTM neural networks to forecast/predict the daily cases of COVID19. This is done by training a LSTM deep learning model on the COVID19 daily cases data obtained from [Malaysia Ministry of Health (MOH) COVID19 GitHub Repository](https://github.com/MoH-Malaysia/covid19-public). The main layer of the LSTM deep learning model is the LSTM layer that is inputted with the aforementioned daily cases data, containing nearly 700 daily records.
 
 # How to Install and Run the Project
-To run and train the model on your own device, clone the whole repository first. Then, proceed to the directory containing the cloned repository. In this particular directory, locate the `nlp.py` file and run this file in your terminal or any of your favorite IDEs. This will generate all the relevant plots and results especially the trained NLP deep learning model.
+To run and train the model on your own device, clone the whole repository first. Then, proceed to the directory containing the cloned repository. In this particular directory, locate the `covid_case_predictor.py` file and run this file in your terminal or any of your favorite IDEs. This will generate all the relevant plots and results especially the trained LSTM deep learning model.
 
 # Results
-## Neural Network Model Plot
-![NLP network](statics/model.png)
+## Neural Network Model Summary & Plot
+![LSTM summary](statics/model_summary.png)
+![LSTM plot](statics/model_plot.png)
 
-## Model Training/Test Loss and Metrics (Accuracy)
+## Model Training MSE Loss and MAPE Metric
 ### Matplotlib Plot
-![loss metric plots mpl](statics/loss_metric_matplotlib_plot.png)
+![loss metric mpl](statics/model_loss_metric_matplotlib_plot.png)
 ### Smoothed Tensorboard Plot
-![loss metrics plots tensoboard](statics/loss_metric_tensorboard_plot.png)
+![loss metric tensorboard](statics/base_performance_loss_metric_tensorboard.png)
 
-## Model Performance on The Test/Out-of-Sample Dataset
-### Classification Report
-![class report](statics/classification_report.png)
-### Confusion Matrix
-![confusion matrix](statics/confusion_matrix.png)
+## Model Key Performance Metrics
+![key metrics](statics/model_metrics.png)
+
+## Model Predictions
+![predictions](statics/model_prediction.png)
 
 # Credits
-- [BBC Text Data](https://raw.githubusercontent.com/susanli2016/PyCon-Canada-2019-NLP-Tutorial/master/bbc-text.csv)
+- [Malaysia Ministry of Health (MOH) GitHub Repository](https://github.com/MoH-Malaysia/covid19-public)
 - [Markdown badges source 1](https://github.com/Ileriayo/markdown-badges)
 - [Markdown badges source 2](https://github.com/alexandresanlim/Badges4-README.md-Profile)
